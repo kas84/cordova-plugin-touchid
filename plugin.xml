@@ -19,6 +19,11 @@
         </config-file>
         <header-file src="src/ios/TouchID.h" />
         <source-file src="src/ios/TouchID.m" />
+        <!-- Usage description of Face ID for iOS 11+ -->
+        <preference name="FACEID_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSFaceIDUsageDescription">
+          <string>$FACEID_USAGE_DESCRIPTION</string>
+        </config-file>
         <framework src="LocalAuthentication.framework" />
         <framework src="Security.framework" />
     </platform>
